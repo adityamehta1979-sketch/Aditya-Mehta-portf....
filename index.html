@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Aditya Mehta — Data Analyst & Business Intelligence</title>
   <meta name="description"
     content="Portfolio of Aditya Mehta — A Data Analyst who bridges the gap between raw data and strategic business decisions.">
@@ -12,7 +12,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700;800&family=Syne:wght@700;800&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=4">
+  <link rel="stylesheet" href="style.css?v=5">
 </head>
 
 <body>
@@ -30,13 +30,14 @@
   <div class="page-wrapper">
 
     <!-- Floating Top Navigation -->
-    <header class="header">
+    <header class="header" id="main-header">
       <div class="nav-container">
-        <a href="#" class="brand-logo">
+        <a href="#" class="brand-logo" aria-label="Aditya Mehta Portfolio Home">
           ADITYA
         </a>
 
-        <nav class="nav-pill">
+        <!-- Desktop Navigation Pill -->
+        <nav class="nav-pill" aria-label="Primary Navigation">
           <a href="#about" class="nav-link">About</a>
           <a href="#academic-experience" class="nav-link">Academic Experience</a>
           <a href="#skills" class="nav-link">Skills</a>
@@ -44,7 +45,54 @@
           <a href="#contact" class="nav-link">Contact</a>
         </nav>
 
-        <a href="#contact" class="btn-nav">Get in Touch</a>
+        <div class="nav-actions">
+          <a href="#contact" class="btn-nav">Get in Touch</a>
+          
+          <!-- Mobile Hamburger Toggle Button -->
+          <button type="button" class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-nav-drawer">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation Drawer Overlay -->
+      <div class="mobile-nav-drawer" id="mobile-nav-drawer" aria-hidden="true">
+        <div class="mobile-drawer-inner">
+          <nav class="mobile-nav-links" aria-label="Mobile Navigation">
+            <a href="#about" class="mobile-nav-link">
+              <span class="mobile-link-num">01</span>
+              <span class="mobile-link-text">About Me</span>
+            </a>
+            <a href="#academic-experience" class="mobile-nav-link">
+              <span class="mobile-link-num">02</span>
+              <span class="mobile-link-text">Academic Experience</span>
+            </a>
+            <a href="#skills" class="mobile-nav-link">
+              <span class="mobile-link-num">03</span>
+              <span class="mobile-link-text">Skills & Toolkit</span>
+            </a>
+            <a href="#certifications" class="mobile-nav-link">
+              <span class="mobile-link-num">04</span>
+              <span class="mobile-link-text">Certifications</span>
+            </a>
+            <a href="#contact" class="mobile-nav-link">
+              <span class="mobile-link-num">05</span>
+              <span class="mobile-link-text">Contact & Inquiry</span>
+            </a>
+          </nav>
+          <div class="mobile-drawer-footer">
+            <a href="mailto:adityamehta1979@gmail.com" class="btn-primary mobile-drawer-cta">
+              <span>Get in Touch</span>
+              <div class="btn-arrow-circle">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </div>
+            </a>
+          </div>
+        </div>
       </div>
     </header>
 
@@ -66,7 +114,7 @@
         <!-- Left Hero Content & Single 'View My Work' CTA Button -->
         <div class="hero-bottom-content">
           <h2 class="hero-subheading">
-            Websites that turn<br>visitors into clients
+            Websites that turn<br class="desktop-br"> visitors into clients
           </h2>
 
           <div class="hero-cta-row">
@@ -207,9 +255,9 @@
             </div>
             <div class="academic-header-row">
               <div class="academic-icon-box">👥</div>
-              <span class="academic-period">LEADERSHIP / ACADEMIC EXPERIENCE</span>
+              <span class="academic-period">LEADERSHIP / OPERATIONS</span>
             </div>
-            <h3 class="academic-title">Data & Operations Lead | Annual College Cultural & Tech Fest</h3>
+            <h3 class="academic-title">Data & Operations Lead | Annual Fest</h3>
             <ul class="academic-bullets">
               <li>Managed and cleaned a database of over 5,000+ attendee registrations.</li>
               <li>Built a dynamic Power BI tracking dashboard for faculty and core committee members to monitor
@@ -235,7 +283,7 @@
               <div class="academic-icon-box">🎯</div>
               <span class="academic-period">EXTRACURRICULAR</span>
             </div>
-            <h3 class="academic-title">Peer Technical Presentations & Analytics Competitions</h3>
+            <h3 class="academic-title">Peer Technical Presentations & Competitions</h3>
             <ul class="academic-bullets">
               <li>Prepared and delivered technical presentations on Generative AI, Large Language Models (LLMs), and
                 Machine Learning fundamentals during college sessions.</li>
@@ -530,7 +578,7 @@
     <section class="manifesto-section">
       <div class="section-container">
         <h2 class="manifesto-heading">
-          I strive to pay attention<br>to the smallest details
+          I strive to pay attention<br class="desktop-br"> to the smallest details
         </h2>
       </div>
     </section>
@@ -550,13 +598,13 @@
               <span>Available for collaborations & inquiries</span>
             </div>
             <h2 class="footer-cta-title">
-              Have a visionary project or role in mind?<br>
+              Have a visionary project or role in mind?<br class="desktop-br">
               <span class="highlight-accent">Let's craft something iconic together.</span>
             </h2>
           </div>
 
           <div class="footer-cta-actions">
-            <a href="mailto:adityamehta1979@gmail.com" class="btn-primary btn-large">
+            <a href="mailto:adityamehta1979@gmail.com" class="btn-primary btn-large footer-action-btn">
               <span>Send a Message</span>
               <div class="btn-arrow-circle">
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
@@ -564,7 +612,7 @@
                 </svg>
               </div>
             </a>
-            <button type="button" id="copy-email-btn" class="btn-secondary btn-large btn-copy-email"
+            <button type="button" id="copy-email-btn" class="btn-secondary btn-large btn-copy-email footer-action-btn"
               data-email="adityamehta1979@gmail.com">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                 class="copy-icon">
@@ -587,7 +635,7 @@
               A Data Analyst who bridges the gap between raw data and strategic business decisions.
             </p>
 
-            <!-- Live Local Time Widget (Server-Side Python Rendered) -->
+            <!-- Live Local Time Widget (Server-Side Python Rendered + Client Live Sync) -->
             <div class="footer-time-widget">
               <span class="time-pulse-dot"></span>
               <span class="time-label">Local Time:</span>
@@ -641,8 +689,8 @@
               <li><a href="#skills" class="footer-link"><span>Data Visualization</span></a></li>
               <li><a href="#skills" class="footer-link"><span>Python Development</span></a></li>
               <li><a href="#skills" class="footer-link"><span>BI Dashboarding</span></a></li>
-              <li><a href="#skills" class="footer-link"><span>AI and ML concept integration</span></a></li>
-              <li><a href="#skills" class="footer-link"><span>Data storytelling</span></a></li>
+              <li><a href="#skills" class="footer-link"><span>AI & ML Concepts</span></a></li>
+              <li><a href="#skills" class="footer-link"><span>Data Storytelling</span></a></li>
             </ul>
           </div>
 
@@ -692,6 +740,147 @@
 
   </div>
 
+  <!-- Copy Email Toast Notification -->
+  <div id="copy-toast" class="copy-toast" role="status" aria-live="polite">
+    <div class="toast-icon">✓</div>
+    <span>Email copied to clipboard!</span>
+  </div>
+
+  <!-- Client-Side Interactive Scripts -->
+  <script>
+    // --- Mobile Menu Toggle & Navigation ---
+    const mobileToggle = document.getElementById('mobile-nav-toggle');
+    const mobileDrawer = document.getElementById('mobile-nav-drawer');
+    const mobileLinks = document.querySelectorAll('.mobile-nav-link, .mobile-drawer-cta');
+
+    function toggleMobileNav(forceState) {
+      if (!mobileToggle || !mobileDrawer) return;
+      const isOpen = typeof forceState === 'boolean' ? !forceState : mobileToggle.classList.contains('active');
+      if (isOpen) {
+        mobileToggle.classList.remove('active');
+        mobileDrawer.classList.remove('open');
+        mobileToggle.setAttribute('aria-expanded', 'false');
+        mobileDrawer.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      } else {
+        mobileToggle.classList.add('active');
+        mobileDrawer.classList.add('open');
+        mobileToggle.setAttribute('aria-expanded', 'true');
+        mobileDrawer.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    if (mobileToggle) {
+      mobileToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        toggleMobileNav();
+      });
+    }
+
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        toggleMobileNav(false);
+      });
+    });
+
+    // Close mobile drawer on Escape key or outside click
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && mobileDrawer && mobileDrawer.classList.contains('open')) {
+        toggleMobileNav(false);
+      }
+    });
+
+    document.addEventListener('click', (e) => {
+      if (mobileDrawer && mobileDrawer.classList.contains('open') && !mobileDrawer.contains(e.target) && !mobileToggle.contains(e.target)) {
+        toggleMobileNav(false);
+      }
+    });
+
+    // --- Copy Email to Clipboard ---
+    const copyEmailBtn = document.getElementById('copy-email-btn');
+    const copyBtnText = document.getElementById('copy-btn-text');
+    const copyToast = document.getElementById('copy-toast');
+
+    if (copyEmailBtn) {
+      copyEmailBtn.addEventListener('click', async () => {
+        const email = copyEmailBtn.getAttribute('data-email') || 'adityamehta1979@gmail.com';
+        try {
+          if (navigator.clipboard && window.isSecureContext) {
+            await navigator.clipboard.writeText(email);
+          } else {
+            const textArea = document.createElement('textarea');
+            textArea.value = email;
+            textArea.style.position = 'fixed';
+            textArea.style.left = '-999999px';
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+            document.execCommand('copy');
+            textArea.remove();
+          }
+          if (copyBtnText) copyBtnText.textContent = 'Copied!';
+          if (copyToast) {
+            copyToast.classList.add('show');
+            setTimeout(() => {
+              copyToast.classList.remove('show');
+            }, 2800);
+          }
+          setTimeout(() => {
+            if (copyBtnText) copyBtnText.textContent = 'Copy Email';
+          }, 3000);
+        } catch (err) {
+          console.error('Failed to copy text: ', err);
+        }
+      });
+    }
+
+    // --- Back to Top Smooth Scroll ---
+    const backToTopBtn = document.getElementById('back-to-top-btn');
+    if (backToTopBtn) {
+      backToTopBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+
+    // --- Active Link ScrollSpy for Desktop Nav ---
+    const sections = document.querySelectorAll('section[id], footer[id]');
+    const navLinks = document.querySelectorAll('.nav-pill .nav-link');
+
+    function highlightActiveNav() {
+      const scrollPos = window.scrollY + 200;
+      sections.forEach(section => {
+        const top = section.offsetTop;
+        const height = section.offsetHeight;
+        const id = section.getAttribute('id');
+        if (scrollPos >= top && scrollPos < top + height) {
+          navLinks.forEach(link => {
+            link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+          });
+        }
+      });
+    }
+
+    window.addEventListener('scroll', highlightActiveNav, { passive: true });
+
+    // --- Live IST Time Ticker (Client update every 30s) ---
+    function updateLiveTime() {
+      const timeElem = document.getElementById('footer-live-time');
+      if (!timeElem) return;
+      const now = new Date();
+      // IST is UTC+5:30
+      const istTime = new Date(now.getTime() + (now.getTimezoneOffset() + 330) * 60000);
+      let hours = istTime.getHours();
+      const minutes = String(istTime.getMinutes()).padStart(2, '0');
+      const ampm = hours >= 12 ? 'PM' : 'AM';
+      hours = hours % 12;
+      hours = hours ? hours : 12;
+      const hoursStr = String(hours).padStart(2, '0');
+      timeElem.textContent = `Pune (IST) • ${hoursStr}:${minutes} ${ampm}`;
+    }
+    setInterval(updateLiveTime, 30000);
+  </script>
 </body>
 
 </html>
